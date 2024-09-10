@@ -1,0 +1,12 @@
+.list {
+    background: #FFFFFF;
+    border-radius: 28px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 65.6%;
+}
+
+.expenseItem {
+
+}

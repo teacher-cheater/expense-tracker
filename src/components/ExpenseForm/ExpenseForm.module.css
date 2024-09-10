@@ -5,6 +5,7 @@
     padding: 32px;
     display: flex;
     flex-direction: column;
+    flex: 1 1 32.3%;
 }
 
 .wrap input {

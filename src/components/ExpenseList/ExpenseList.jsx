@@ -1,10 +1,11 @@
 import React from 'react';
+import s from './ExpenseList.module.css';
 
 const ExpenseList = ({expenses}) => {
     return (
-        <div>
+        <div className={s.list}>
             {expenses.map(expense => (
-                <div key={expense.id} className="expense-item">
+                <div key={expense.id} className={s.expenseItem}>
                     <div>{expense.description}</div>
                     <div>{expense.category}</div>
                     <div>{expense.date}</div>

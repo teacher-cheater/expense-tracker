@@ -15,7 +15,6 @@ const ExpenseForm = ({onAdd}) => {
         e.preventDefault();
         onAdd({...formData, id: Date.now()});
         setFormData({description: '', date: '', category: '', amount: ''});
-        console.log(formData)
     };
 
     const handleChange = (e) => {
@@ -29,7 +28,7 @@ const ExpenseForm = ({onAdd}) => {
                 <label className={s.wrap}>
                     <h4 className={s.subtitle}>Описание</h4>
                     <input name="description" type="text" value={formData.description} onChange={handleChange}
-                           required/>
+                           required placeholder="Введите описание"/>
                 </label>
                 <div className={s.wrapper}>
                     <h4 className={s.subtitle}>Категория</h4>
@@ -114,11 +113,13 @@ const ExpenseForm = ({onAdd}) => {
                 </div>
                 <h4 className={s.subtitle}>Дата</h4>
                 <label className={s.wrap}>
-                    <input name="date" type="text" value={formData.date} onChange={handleChange} required/>
+                    <input name="date" type="text" value={formData.date} onChange={handleChange}
+                           placeholder="Введите дату" required/>
                 </label>
                 <label className={s.wrap}>
                     <h4 className={s.subtitle}>Сумма</h4>
-                    <input name="amount" type="number" value={formData.amount} onChange={handleChange} required/>
+                    <input name="amount" type="number" value={formData.amount} onChange={handleChange}
+                           placeholder="Введите сумму" required/>
                 </label>
                 <button className={s.btn} type="submit">Добавить новый расход</button>
             </form>
