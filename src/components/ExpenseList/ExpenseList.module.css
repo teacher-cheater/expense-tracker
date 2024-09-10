@@ -7,6 +7,84 @@
     flex: 1 1 65.6%;
 }
 
-.expenseItem {
+.headerExpense {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 32px;
+}
+
+.tblTitle {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.21;
+}
+
+.blockFilter {
+    display: flex;
+    gap: 24px;
+}
+
+.titleFilter{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.headerRow {
+    border-bottom: 1px solid #ddd;
+    color: #999999;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: left;
 
 }
+
+.expenseItem, .headerRow {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.subtitle, .content {
+    flex: 1 0 16%;
+}
+
+.subtitle {
+
+}
+
+.content {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.contentBtn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+}
+
+.contentBtn button {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.expenseContainer {
+    width: 100%;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+
+
