@@ -4,8 +4,7 @@ import pen from '../../images/icons/pen.svg'
 import bag from '../../images/icons/del.svg'
 import arrow from '../../images/icons/arrow.svg'
 
-const ExpenseList = ({expenses, onDelete}) => {
-
+const ExpenseList = ({expenses, onDelete, sortExpenses, filterExpenses}) => {
     return (
         <div className={s.list}>
             <div className={s.headerExpense}>
@@ -13,18 +12,19 @@ const ExpenseList = ({expenses, onDelete}) => {
                 <div className={s.blockFilter}>
                     <div>
                         <span className={s.titleFilter}>Фильтровать по</span>
-                        <select className={s.select}>
-                            <option value="category-asc">категории</option>
-                            <option value="category-desc">категории</option>
+                        <select className={s.filterExpense} onChange={(e) => filterExpenses(e.target.value)}>
+                            <option value="">категории</option>
+                            <option value="meal">еда</option>
+                            <option value="transport">транспорт</option>
+                            <option value="housing">жилье</option>
+                            <option value="entertainments">развлечения</option>
+                            <option value="education">образование</option>
+                            <option value="more">другое</option>
                         </select>
                     </div>
                     <div>
-                        <span className={s.titleFilter}>Сортировать по</span>
-                        <select className={s.select}>
-                            <option value="date-asc">дате</option>
-                            <option value="date-desc">дате</option>
-                            <option value="сумме">сумме</option>
-                        </select>
+                        <span onClick={() => sortExpenses()} className={s.titleFilter}>Сортировать по <span
+                            className={s.sortDate}>дате</span> <img src={arrow} alt="arrow"/></span>
                     </div>
                 </div>
             </div>

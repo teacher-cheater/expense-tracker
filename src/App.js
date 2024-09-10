@@ -8,27 +8,43 @@ function App() {
         const storedExpenses = localStorage.getItem('expenses');
         return storedExpenses ? JSON.parse(storedExpenses) : [];
     });
+    const [sort, setSort] = useState(false);
+    const [filteredCategory, setFilteredCategory] = useState('');
 
     useEffect(() => {
         localStorage.setItem('expenses', JSON.stringify(expenses));
     }, [expenses]);
-
-    console.log(expenses)
 
     const addExpense = (expense) => {
         setExpenses([...expenses, expense]);
     };
 
     const deleteExpense = (id) => {
-        const updateExpenses = expenses.filter((expense)=> expense.id !== id)
+        const updateExpenses = expenses.filter((expense) => expense.id !== id)
         setExpenses(updateExpenses);
     };
+
+    const filterExpenses = (category) => {
+        setFilteredCategory(category);
+    };
+
+    const sortExpenses = () => {
+        setSort(!sort);
+    };
+
+    const filteredExpenses = expenses.filter(expense =>
+        filteredCategory ? expense.category === filteredCategory : true
+    );
+
+    const sortedExpenses = sort
+        ? [...filteredExpenses].sort((a, b) => new Date(a.date) - new Date(b.date))
+        : filteredExpenses;
 
     return (
         <div className="App">
             <div className="my-expenses">
-                <ExpenseList expenses={expenses} onDelete={deleteExpense}/>
-                <ExpenseForm onAdd={addExpense} />
+                <ExpenseList expenses={sortedExpenses} onDelete={deleteExpense} sortExpenses={sortExpenses} filterExpenses={filterExpenses} />
+                <ExpenseForm onAdd={addExpense}/>
             </div>
         </div>
     );

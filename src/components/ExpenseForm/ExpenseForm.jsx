@@ -36,8 +36,8 @@ const ExpenseForm = ({onAdd}) => {
                         type="radio"
                         id="meal"
                         name="category"
-                        value="еда"
-                        checked={formData.category === 'еда'}
+                        value="meal"
+                        checked={formData.category === 'meal'}
                         onChange={handleChange}
                     />
                     <label htmlFor="meal" className={s.categoryLabel}>
@@ -49,8 +49,8 @@ const ExpenseForm = ({onAdd}) => {
                         type="radio"
                         id="transport"
                         name="category"
-                        value="транспорт"
-                        checked={formData.category === 'транспорт'}
+                        value="transport"
+                        checked={formData.category === 'transport'}
                         onChange={handleChange}
                     />
                     <label htmlFor="transport" className={s.categoryLabel}>
@@ -61,9 +61,9 @@ const ExpenseForm = ({onAdd}) => {
                     <input
                         type="radio"
                         name="category"
-                        value="жилье"
+                        value="housing"
                         id="housing"
-                        checked={formData.category === 'жилье'}
+                        checked={formData.category === 'housing'}
                         onChange={handleChange}
                     />
                     <label htmlFor="housing" className={s.categoryLabel}>
@@ -74,9 +74,9 @@ const ExpenseForm = ({onAdd}) => {
                     <input
                         type="radio"
                         name="category"
-                        value="развлечения"
+                        value="entertainments"
                         id="entertainments"
-                        checked={formData.category === 'развлечения'}
+                        checked={formData.category === 'entertainments'}
                         onChange={handleChange}
                     />
 
@@ -88,9 +88,9 @@ const ExpenseForm = ({onAdd}) => {
                     <input
                         type="radio"
                         name="category"
-                        value="образование"
+                        value="education"
                         id="education"
-                        checked={formData.category === 'образование'}
+                        checked={formData.category === 'education'}
                         onChange={handleChange}
                     />
                     <label htmlFor="education" className={s.categoryLabel}>
@@ -101,9 +101,9 @@ const ExpenseForm = ({onAdd}) => {
                     <input
                         type="radio"
                         name="category"
-                        value="другое"
+                        value="more"
                         id="more"
-                        checked={formData.category === 'другое'}
+                        checked={formData.category === 'more'}
                         onChange={handleChange}
                     />
                     <label htmlFor="more" className={s.categoryLabel}>
