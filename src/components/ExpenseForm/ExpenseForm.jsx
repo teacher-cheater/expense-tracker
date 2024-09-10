@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import s from './ExpenseForm.module.css';
 import car from '../../images/icons/car.svg';
 import bag from '../../images/icons/bag.svg';
@@ -7,7 +7,21 @@ import house from '../../images/icons/house.svg';
 import more from '../../images/icons/more.svg';
 import teacher from '../../images/icons/teacher.svg';
 
-const ExpenseForm = ({handleSubmit, handleChange, formData}) => {
+const ExpenseForm = ({onAdd}) => {
+
+    const [formData, setFormData] = useState({description: '', date: '', category: '', amount: ''});
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        onAdd({...formData, id: Date.now()});
+        setFormData({description: '', date: '', category: '', amount: ''});
+        console.log(formData)
+    };
+
+    const handleChange = (e) => {
+        setFormData({...formData, [e.target.name]: e.target.value});
+    };
+
     return (
         <div className={s.expenses}>
             <h2 className={s.title}>Новый расход</h2>
