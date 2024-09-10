@@ -4,7 +4,7 @@
     padding: 32px;
     display: flex;
     flex-direction: column;
-    flex: 1 1 65.6%;
+    flex: 1 1 65%;
 }
 
 .headerExpense {
@@ -25,11 +25,23 @@
     gap: 24px;
 }
 
-.titleFilter{
+.titleFilter {
     font-size: 12px;
     font-weight: 400;
     line-height: 1.5;
     text-align: center;
+}
+
+.select {
+    border: none;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.expenseContainer {
+    max-height: 618px;
+    overflow-x: auto;
 }
 
 .headerRow {
@@ -39,10 +51,11 @@
     font-weight: 400;
     line-height: 1.2;
     text-align: left;
-
+    align-items: center;
 }
 
-.expenseItem, .headerRow {
+.expenseItem {
+    padding-top: 40px;
     display: flex;
     gap: 32px;
     align-items: center;
@@ -73,10 +86,6 @@
     border: none;
     outline: none;
     background: transparent;
-}
-
-.expenseContainer {
-    width: 100%;
 }
 
 .gridContainer {

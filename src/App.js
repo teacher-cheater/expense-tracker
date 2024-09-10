@@ -19,11 +19,16 @@ function App() {
         setExpenses([...expenses, expense]);
     };
 
+    const deleteExpense = (id) => {
+        const updateExpenses = expenses.filter((expense)=> expense.id !== id)
+        setExpenses(updateExpenses);
+    };
+
     return (
         <div className="App">
             <div className="my-expenses">
-                <ExpenseList expenses={expenses}/>
-                <ExpenseForm onAdd={addExpense}/>
+                <ExpenseList expenses={expenses} onDelete={deleteExpense}/>
+                <ExpenseForm onAdd={addExpense} />
             </div>
         </div>
     );
