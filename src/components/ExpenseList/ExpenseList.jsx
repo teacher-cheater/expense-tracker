@@ -10,7 +10,7 @@ const ExpenseList = ({expenses, onDelete, sortExpenses, filterExpenses}) => {
             <div className={s.headerExpense}>
                 <h4 className={s.tblTitle}>Таблица расходов</h4>
                 <div className={s.blockFilter}>
-                    <div>
+                    <div className={s.selectWrapper}>
                         <span className={s.titleFilter}>Фильтровать по</span>
                         <select className={s.filterExpense} onChange={(e) => filterExpenses(e.target.value)}>
                             <option value="">категории</option>
@@ -21,6 +21,7 @@ const ExpenseList = ({expenses, onDelete, sortExpenses, filterExpenses}) => {
                             <option value="education">образование</option>
                             <option value="more">другое</option>
                         </select>
+                        <img src={arrow} alt="arrow" className={s.selectIcon} />
                     </div>
                     <div>
                         <span onClick={() => sortExpenses()} className={s.titleFilter}>Сортировать по <span

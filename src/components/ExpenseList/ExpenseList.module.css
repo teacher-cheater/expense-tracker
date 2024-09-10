@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     flex: 1 1 65%;
+    position: relative;
 }
 
 .headerExpense {
@@ -25,18 +26,39 @@
     gap: 24px;
 }
 
+.selectWrapper {
+    position: relative;
+    display: inline-block;
+}
+
 .titleFilter {
     font-size: 12px;
     font-weight: 400;
     line-height: 1.5;
     text-align: center;
+    cursor: pointer;
 }
 
-.filterExpense{
+.filterExpense {
     border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0 10px;
+    cursor: pointer;
 }
 
-.sortDate{
+.selectIcon {
+    position: absolute;
+    right: 16px;
+    top: 53%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    width: 7px;
+    height: 6px;
+}
+
+.sortDate {
     color: #1FA46C;
     text-decoration: underline;
 }
@@ -54,13 +76,22 @@
 }
 
 .headerRow {
-    border-bottom: 1px solid #ddd;
     color: #999999;
     font-size: 12px;
     font-weight: 400;
     line-height: 1.2;
     text-align: left;
     align-items: center;
+}
+
+.headerRow::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 126px;
+    width: 100%;
+    height: 1px;
+    background: #ddd;
 }
 
 .expenseItem {
