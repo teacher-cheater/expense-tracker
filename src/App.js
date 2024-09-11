@@ -39,7 +39,9 @@ function App() {
     );
 
     const sortedExpenses = sort
-        ? [...filteredExpenses].sort((a, b) => new Date(a.date) - new Date(b.date))
+        ? [...filteredExpenses].sort((a, b) => {
+            return new Date(b.date) - new Date(a.date)
+        })
         : filteredExpenses;
 
     return (
@@ -47,7 +49,8 @@ function App() {
             <Header/>
             <Main/>
             <div className="my-expenses">
-                <ExpenseList expenses={sortedExpenses} onDelete={deleteExpense} sortExpenses={sortExpenses} filterExpenses={filterExpenses} />
+                <ExpenseList expenses={sortedExpenses} onDelete={deleteExpense} sortExpenses={sortExpenses}
+                             filterExpenses={filterExpenses}/>
                 <ExpenseForm onAdd={addExpense}/>
             </div>
         </div>

@@ -41,7 +41,7 @@ const ExpenseForm = ({onAdd}) => {
                         onChange={handleChange}
                     />
                     <label htmlFor="meal" className={s.categoryLabel}>
-                        <img src={bag} alt=""/>
+                        <img src={bag} alt="meal"/>
                         Еда
                     </label>
 
@@ -54,7 +54,7 @@ const ExpenseForm = ({onAdd}) => {
                         onChange={handleChange}
                     />
                     <label htmlFor="transport" className={s.categoryLabel}>
-                        <img src={car} alt=""/>
+                        <img src={car} alt="transport"/>
                         Транспорт
                     </label>
 
@@ -67,7 +67,7 @@ const ExpenseForm = ({onAdd}) => {
                         onChange={handleChange}
                     />
                     <label htmlFor="housing" className={s.categoryLabel}>
-                        <img src={house} alt=""/>
+                        <img src={house} alt="housing"/>
                         Жилье
                     </label>
 
@@ -81,7 +81,7 @@ const ExpenseForm = ({onAdd}) => {
                     />
 
                     <label htmlFor="entertainments" className={s.categoryLabel}>
-                        <img src={gameboy} alt=""/>
+                        <img src={gameboy} alt="entertainments"/>
                         Развлечения
                     </label>
 
@@ -94,7 +94,7 @@ const ExpenseForm = ({onAdd}) => {
                         onChange={handleChange}
                     />
                     <label htmlFor="education" className={s.categoryLabel}>
-                        <img src={teacher} alt=""/>
+                        <img src={teacher} alt="education"/>
                         Образование
                     </label>
 
@@ -107,13 +107,13 @@ const ExpenseForm = ({onAdd}) => {
                         onChange={handleChange}
                     />
                     <label htmlFor="more" className={s.categoryLabel}>
-                        <img src={more} alt=""/>
+                        <img src={more} alt="more"/>
                         Другое
                     </label>
                 </div>
                 <h4 className={s.subtitle}>Дата</h4>
                 <label className={s.wrap}>
-                    <input name="date" type="text" value={formData.date} onChange={handleChange}
+                    <input name="date" type="date" value={formData.date} onChange={handleChange}
                            placeholder="Введите дату" required/>
                 </label>
                 <label className={s.wrap}>
