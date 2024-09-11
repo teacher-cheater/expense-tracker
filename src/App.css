@@ -26,4 +26,5 @@ body{
     gap: 34px;
     background: #F4F5F6;
     flex-wrap: wrap;
+    width: 100%;
 }
