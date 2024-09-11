@@ -6,11 +6,16 @@
     box-sizing: border-box;
 }
 
-.App {
+body{
     background: #F4F5F6;
-    min-height: 100%;
-    padding: 100px 0;
+}
+
+.App {
     font-family: 'Montserrat', serif;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 40px;
 }
 
 .my-expenses {

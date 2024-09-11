@@ -1,0 +1,16 @@
+.main{
+    max-width: 1222px;
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 100%;
+    flex-shrink: 1;
+}
+
+.title{
+    padding: 36px 0 32px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.5;
+    display: flex;
+    justify-content: flex-start;
+}
