@@ -14,12 +14,12 @@ const ExpenseList = ({expenses, onDelete, sortExpenses, filterExpenses}) => {
                         <span className={s.titleFilter}>Фильтровать по</span>
                         <select className={s.filterExpense} onChange={(e) => filterExpenses(e.target.value)}>
                             <option value="">категории</option>
-                            <option value="meal">еда</option>
-                            <option value="transport">транспорт</option>
-                            <option value="housing">жилье</option>
-                            <option value="entertainments">развлечения</option>
-                            <option value="education">образование</option>
-                            <option value="more">другое</option>
+                            <option value="еда">еда</option>
+                            <option value="транспорт">транспорт</option>
+                            <option value="жилье">жилье</option>
+                            <option value="развлечения">развлечения</option>
+                            <option value="образование">образование</option>
+                            <option value="другое">другое</option>
                         </select>
                         <img src={arrow} alt="arrow" className={s.selectIcon} />
                     </div>
